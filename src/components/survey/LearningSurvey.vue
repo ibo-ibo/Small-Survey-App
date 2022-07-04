@@ -58,7 +58,6 @@ export default {
       invalidInput: false,
     };
   },
-  //emits: ['survey-submit'],
   methods: {
     submitSurvey() {
       if (this.enteredName === '' || !this.chosenRating) {
@@ -66,11 +65,7 @@ export default {
         return;
       }
       this.invalidInput = false;
-
-      // this.$emit('survey-submit', {
-      //   userName: this.enteredName,
-      //   rating: this.chosenRating,
-      // });
+      
       fetch(
         `https://vue-app-b88b3-default-rtdb.europe-west1.firebasedatabase.app/surveys.json`,
         {
